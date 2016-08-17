@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GOD'S WILL</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link src="main.js">
+</head>
+<body>
+	<div id="imgContainer"></div>   <!-- background image -->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~ homepage container 0 ~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+
+	<div id="homePage" class="container">
+
+		<h1 class="title">GOD'S WILL</h1>
+		<img id="dialogue" src="img/dialogue.png">
+
+		<div class="content_container">
+			<img id="whichOneButton" src="img/whichone.png" onclick="showContainer(1); hideContainer(0);" style="cursor:pointer">
+			<img id="godPortrait" src="img\god.png">
+			<img id="whoWillDoButton" src="img/whowilldo.png" onclick="showContainer(3); hideContainer(0);" style="cursor:pointer">
+		</div>
+	</div>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~ which one page container 1 ~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+	<div id="whichOnePage" class="container">  <!--  class="container" add animation to show/hide-->
+
+		<img class="backButton" src="img/btnBack.png" onclick="showContainer(0); hideContainer(1);" style="cursor:pointer">
+		<h1 class="title">INPUT YOUR OPTIONS</h1>
+
+		<div class="inputBar" id="inputOptions">
+			<input type="text" id="inputText">  
+
+			<img id="addButton" src="img/btnAdd.png" onclick="saveText();" style="cursor:pointer"> 
+		</div>
+
+		<div class="showArea" id="showArea_options1">
+		</div>
+
+		<img class="button" id="okButton1" src="img/btnOk.png" onclick="showContainer(2); hideContainer(1); showResult();" style="cursor:pointer">
+	</div>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~ which one result page container 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+	<div id="whichOnePage_result" class="container">  <!--  class="container" add animation to show/hide-->
+
+		<img class="backButton" src="img/btnBack.png" onclick="showContainer(1); hideContainer(2);" style="cursor:pointer">
+		<h1 class="title">DON'T HESITATE</h1>
+
+		<div id="result"></div>    <!--    js add value -->
+		
+		<img class="button" id="newRoundButton1" src="img/btnNewRound.png" onclick="showContainer(0); hideContainer(2);" style="cursor:pointer">
+	</div>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~ who will do page container 3 ~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+	<div id="whoWillDoPage" class="container">  <!--  class="container"  add animation to show/hide-->
+
+		<img class="backButton" src="img/btnBack.png" onclick="showContainer(0); hideContainer(3);" style="cursor:pointer">
+		<h1 class="title">HOW MANY PEOPLE</h1>
+
+		<div class="inputBar" id="inputNumber">
+			<input type="text" id="inputNum">
+		</div>
+
+		<img class="button" id="okButton2" src="img/btnOk.png" onclick="showContainer(4); hideContainer(3); saveNumber();showBoxes();" style="cursor:pointer">
+	</div>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~ who will do play result container 4 ~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+	<div id="whoWillDoPage_result"  class="container">  <!--  class="container"  add animation to show/hide-->
+
+<!-- 		<img class="backButton" id="backButton" src="img/btnBack.png"> -->
+		<div class="title"><h2>COME ON GUYS</h2><h3>CHOOSE ONE!</h3></div>
+
+		<img class="button" id="newRoundButton2" src="img/btnNewRound.png" onclick="showContainer(0); hideContainer(4);" style="cursor:pointer">
+
+		<div class="showArea" id="showArea_options2">   <!--    js add value -->
+		</div>
+	</div>
+
+
+
+
+
+	<script src="main.js"></script>
+
+</body>
+</html>
